@@ -8,6 +8,11 @@ public abstract class Animal {
 	 
 	 
     public abstract int super_attack();
+    
+    public void dammage(int attack)
+    {
+    	this.life -= attack;
+    }
 	 
 	public String get_name() {
 		return _name;
