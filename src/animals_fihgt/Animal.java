@@ -3,8 +3,8 @@ package animals_fihgt;
 public abstract class Animal {
 
 	 String _name;
-	 int life = (int) (20 + (Math.random() * (50 - 20)));
-	 int attack;
+	 int life = (int) (20 + (Math.random() * (800 - 400)));
+	 int attack = (int) ((Math.random() * (30)));
 	 
 	 
     public abstract int super_attack();

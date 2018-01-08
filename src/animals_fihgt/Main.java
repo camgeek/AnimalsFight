@@ -7,9 +7,11 @@ public class Main {
 		Cat chat = new Cat();
 		Dog chien = new Dog();
 		Ferret furet = new Ferret();
-		//chat.setLife(50);
 		System.out.println(chat.getLife());
 		System.out.println(chien.getLife());
 		System.out.println(furet.getLife());
+		System.out.println(chat.getAttack());
+		System.out.println(chien.getAttack());
+		System.out.println(furet.getAttack());
 	}
 }
