@@ -4,8 +4,7 @@ public class Ferret extends Animal{
 
 	@Override
 	public int super_attack() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 15 + (int)(15 + (Math.random() * (50 - 15)));
 	}
 
 }

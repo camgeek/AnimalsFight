@@ -4,7 +4,7 @@ public class Dog extends Animal{
 
 	@Override
 	public int super_attack() {
-		return 0;
+		return 20 + (int) ((Math.random() * (40)));
 	}
 
 }
