@@ -4,11 +4,11 @@ import java.util.ArrayList;
 public class Main {
 	public static void main(String[] args)
 	{
-		System.out.println("test");
+		//System.out.println("test");
 		Cat chat = new Cat();
 		Dog chien = new Dog();
 		Ferret furet = new Ferret();
-		attack_rand(chien, furet);
+		//attack_rand(chien, furet);
 		ArrayList<Animal> animals = new ArrayList<Animal>();
 		
 		animals.add(chat);
@@ -16,8 +16,9 @@ public class Main {
 		animals.add(furet);
 		
 		for (Animal object: animals) {
-			System.out.println(object.getLife());
-			System.out.println(object.getAttack());
+			/*System.out.println(object.getLife());
+			System.out.println(object.getAttack());*/
+			System.out.println(object.attack());
 		}
 	}
 	

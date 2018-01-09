@@ -5,9 +5,12 @@ public abstract class Animal {
 	 String _name;
 	 int life = (int) (20 + (Math.random() * (800 - 400)));
 	 int attack = (int) ((Math.random() * (30)));
+	 String superAttackName;
 	 
 	 
-    public abstract int super_attack();
+    protected abstract int super_attack();
+    
+    public abstract int attack();
     
     public void dammage(int attack)
     {
