@@ -19,9 +19,13 @@ public class Game {
 		player.setAnimals(animals);
 		this.setNameAnimals(player);
 		this.gameLoop(player);
-		/*for (Animal object: player.getAnimals()) {
-			System.out.println(object.get_name());
-		}*/
+		this.ending(player);
+	}
+	
+	public void ending(Player player)
+	{
+		System.out.println("Vous n'avez plus d'animaux il sont tous mort au combat");
+		System.out.println("Merci : "+ player.get_name()+" d'avoir à cette partie");
 	}
 	
 	public void gameLoop(Player player)
