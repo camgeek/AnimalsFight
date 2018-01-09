@@ -18,8 +18,54 @@ public class Game {
 		animals = createWallet();
 		player.setAnimals(animals);
 		this.setNameAnimals(player);
-		for (Animal object: player.getAnimals()) {
+		this.gameLoop(player);
+		/*for (Animal object: player.getAnimals()) {
 			System.out.println(object.get_name());
+		}*/
+	}
+	
+	public void gameLoop(Player player)
+	{
+		Scanner sc = new Scanner(System.in);
+		int choice;
+		while (player.getAnimals().size() != 0)
+		{
+			this.checkDead(player);
+			System.out.println("Choissiez votre animal");
+			for (int i = 0;i < player.getAnimals().size(); i++)
+			{
+				System.out.println(player.getAnimals().get(i).get_name() + "taper : " + i);
+			}
+			choice = sc.nextInt();
+			this.combat(player, choice);
+			this.checkDead(player);
+		}
+	}
+	
+	public void combat(Player player, int choice)
+	{
+		Animal enemy = this.getRandomAnimal();
+		while (enemy.getLife() > 0 && player.getAnimals().get(choice).getLife() > 0)
+		{
+			System.out.println("Le terrible combat commence !");
+			System.out.println("Vous attaquer l'ennemie");
+			enemy.dammage(player.getAnimals().get(choice).attack());
+			System.out.println("L'ennemie vous attaque");
+			player.getAnimals().get(choice).dammage(enemy.attack());
+			System.out.println("Ennemie à encore : "+ enemy.getLife()+" PV");
+			System.out.println(player.getAnimals().get(choice).get_name() +
+					" à encore : "+ player.getAnimals().get(choice).getLife()+" PV");
+		}
+	}
+	
+	public void checkDead(Player player)
+	{
+		for (int i = 0;i < player.getAnimals().size();i++)
+		{
+			if (player.getAnimals().get(i).getLife() <= 0)
+			{
+				player.getAnimals().remove(i);
+			}
 		}
 	}
 	
