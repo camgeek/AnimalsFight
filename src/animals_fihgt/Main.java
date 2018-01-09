@@ -4,6 +4,9 @@ import java.util.ArrayList;
 public class Main {
 	public static void main(String[] args)
 	{
+		Game game = new Game();
+		game.start();
+		/*Player joueur = new Player();
 		//System.out.println("test");
 		Cat chat = new Cat();
 		Dog chien = new Dog();
@@ -15,11 +18,13 @@ public class Main {
 		animals.add(chien);
 		animals.add(furet);
 		
-		for (Animal object: animals) {
+		joueur.setAnimals(animals);
+		
+		for (Animal object: joueur.getAnimals()) {
 			/*System.out.println(object.getLife());
-			System.out.println(object.getAttack());*/
+			System.out.println(object.getAttack());
 			System.out.println(object.attack());
-		}
+		}*/
 	}
 	
 	static public void attack_rand(Animal ani1,Animal ani2)
