@@ -10,7 +10,7 @@ public class Game {
 	public void start()
 	{
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Bienvenu dans le monde de olydri, Donne moi ton nom jeune bambin");
+		System.out.println("Bienvenu dans le monde d'olydri, Donne moi ton nom jeune bambin");
 		String str = sc.nextLine();
 		player.set_name(str);
 		System.out.println(player.get_name()+" ho quelle beau nom");
@@ -25,12 +25,12 @@ public class Game {
 	
 	public void setNameAnimals(Player player)
 	{
-		System.out.println("Tu viens de recevoir 5 pokém.. animaux il faut les nommées");
+		System.out.println("Tu viens de recevoir 5 pokém.. animaux, il faut les nommées");
 		Scanner sc = new Scanner(System.in);
 		String str;
 		for (Animal object: player.getAnimals())
 		{
-			System.out.println("Comment veut tu nommé ce manifique : "+object.getClass().getSimpleName());
+			System.out.println("Comment veux-tu nommer ce manifique : "+object.getClass().getSimpleName());
 			str = sc.nextLine();
 			object.set_name(str);
 		}
