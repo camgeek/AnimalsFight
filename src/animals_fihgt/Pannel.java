@@ -27,28 +27,52 @@ public class Pannel extends JPanel {
 				e.printStackTrace();
 			}
 		  }  */
-	 private int posX = -50;
-	  private int posY = -50;
+	 private int posX = 50;
+	  private int posY = 50;
+	  private int choice;
 
-	  public void paintComponent(Graphics g){
+	  public int getChoice() {
+		return choice;
+	}
+
+	public void setChoice(int choice) {
+		this.choice = choice;
+	}
+
+	public void paintComponent(Graphics g){
 	    //On choisit une couleur de fond pour le rectangle
 	    g.setColor(Color.white);
 	    //On le dessine de sorte qu'il occupe toute la surface
 	    g.fillRect(0, 0, this.getWidth(), this.getHeight());
-	    
+	    if (choice == 1)
+	    {
+	    	this.paintCat(g);
+	    	System.out.println("hey");
+	    }
 	    Image img;
-	    Image chat;
+	    //Image chat;
 		try {
 			img = ImageIO.read(new File("Pictures/Poochyena.png"));
-			chat = ImageIO.read(new File("Pictures/Cat.png"));
-		     g.drawImage(img, posX, posY, this);
-		     g.drawImage(chat, posX + 300, posY, this);
+			//chat = ImageIO.read(new File("Pictures/Cat.png"));
+		     g.drawImage(img, posX, posY + 500, this);
+		   //  g.drawImage(chat, posX + 900, posY, this);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	  }
-
+	  
+	  public void paintCat(Graphics g) {
+		  Image chat;
+		  try {
+				chat = ImageIO.read(new File("Pictures/Cat.png"));
+			     g.drawImage(chat, posX + 900, posY, this);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	  }
+	  
 	  public int getPosX() {
 	    return posX;
 	  }

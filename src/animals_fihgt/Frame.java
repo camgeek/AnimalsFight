@@ -7,7 +7,7 @@ public class Frame extends JFrame {
 	
 		  public Frame(){
 		    this.setTitle("Anmials Fight");
-		    this.setSize(1400, 850);
+		    this.setSize(1200, 850);
 		    //this.setSize(300, 300);
 		    this.setLocationRelativeTo(null);
 		    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -17,15 +17,23 @@ public class Frame extends JFrame {
 		  }
 
 private void go(){
-    for(int i = -50; i < _pannel.getWidth(); i++){
+    for(int i = 50; i < _pannel.getWidth(); i++){
       int x = _pannel.getPosX(), y = _pannel.getPosY();
-      x++;
-      y++;
+      //x++;
+      if ((i % 2) == 0)
+      {
+    	  _pannel.setChoice(1);
+    	  //y--;
+      }
+      else
+      {
+    	  _pannel.setChoice(2);
+      }
       _pannel.setPosX(x);
       _pannel.setPosY(y);
       _pannel.repaint();  
       try {
-        Thread.sleep(10);
+        Thread.sleep(100);
       } catch (InterruptedException e) {
         e.printStackTrace();
       }
