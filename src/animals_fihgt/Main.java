@@ -1,11 +1,16 @@
 package animals_fihgt;
 import java.util.ArrayList;
 
+import javax.swing.JFrame;
+
 public class Main {
 	public static void main(String[] args)
 	{
 		Game game = new Game();
-		game.start();
+		//game.start();
+		
+		Frame frame = new Frame();
+		
 		/*Player joueur = new Player();
 		//System.out.println("test");
 		Cat chat = new Cat();
