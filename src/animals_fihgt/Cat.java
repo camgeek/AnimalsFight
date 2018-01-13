@@ -2,7 +2,7 @@ package animals_fihgt;
 
 public class Cat extends Animal{
 	
-	String superAttackName = "CalinChatPottÃ©";
+	String superAttackName = "CalinChatPotté";
 	
 	@Override
 	protected int super_attack() {

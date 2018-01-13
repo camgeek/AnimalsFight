@@ -25,7 +25,7 @@ public class Game {
 	public void ending(Player player)
 	{
 		System.out.println("Vous n'avez plus d'animaux il sont tous mort au combat");
-		System.out.println("Merci : "+ player.get_name()+" d'avoir Ã  cette partie");
+		System.out.println("Merci : "+ player.get_name()+" d'avoir participer cette partie");
 	}
 	
 	public void gameLoop(Player player)
@@ -56,9 +56,9 @@ public class Game {
 			enemy.dammage(player.getAnimals().get(choice).attack());
 			System.out.println("L'ennemie vous attaque");
 			player.getAnimals().get(choice).dammage(enemy.attack());
-			System.out.println("Ennemie Ã  encore : "+ enemy.getLife()+" PV");
+			System.out.println("Ennemie a encore : "+ enemy.getLife()+" PV");
 			System.out.println(player.getAnimals().get(choice).get_name() +
-					" Ã  encore : "+ player.getAnimals().get(choice).getLife()+" PV");
+					" A  encore : "+ player.getAnimals().get(choice).getLife()+" PV");
 		}
 	}
 	
@@ -75,7 +75,7 @@ public class Game {
 	
 	public void setNameAnimals(Player player)
 	{
-		System.out.println("Tu viens de recevoir 5 pokÃ©m.. animaux, il faut les nommÃ©es");
+		System.out.println("Tu viens de recevoir 5 poké.. animaux, il faut les nommées");
 		Scanner sc = new Scanner(System.in);
 		String str;
 		for (Animal object: player.getAnimals())
