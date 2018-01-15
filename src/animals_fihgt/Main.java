@@ -7,6 +7,8 @@ public class Main {
 	public static void main(String[] args)
 	{
 		Game game = new Game();
+		/*WindowsBuilderTest frame = new WindowsBuilderTest();
+		frame.main(null);*/
 		game.start();
 	}
 }
